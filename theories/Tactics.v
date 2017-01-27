@@ -7,7 +7,7 @@ Import ListNotations.
 
 Require Import Strings.String.
 
-Local Set Universe Polymorphism.
+(* Local Set Universe Polymorphism. *)
 
 Definition CantCoerce : Exception. exact exception. Qed.
 
@@ -403,6 +403,7 @@ Definition cprint {A} (s: string) (c: A) :=
 
 Notation reduce_novars := (reduce (RedStrong [RedBeta;RedIota;RedDeltaC;RedZeta])).
 
+Set Printing Universes.
 Definition destruct {A : Type} (n : A) : tactic := fun g=>
   b <- let n := rcbv n in is_var n;
   ctx <- if b then hyps_except n else hypotheses;
