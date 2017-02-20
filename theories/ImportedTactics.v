@@ -3,7 +3,7 @@ Import MtacNotations.
 Import TacticsNotations.
 
 Require Import Strings.String.
-Require Import Lists.List.
+From MetaCoq Require Import List.
 Import ListNotations.
 
 Definition qualify s := String.append "MetaCoq.ImportedTactics." s.

@@ -1,7 +1,7 @@
 Require Import Strings.String.
 From MetaCoq Require Export Mtac2.
 Require Import MetaCoq.ListUtils.
-Require Import Lists.List.
+From MetaCoq Require Import List.
 Import MtacNotations.
 Import ListNotations.
 

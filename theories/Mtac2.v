@@ -3,10 +3,11 @@ Declare ML Module "unicoq".
 (** Load library "MetaCoqPlugin.cma". *)
 Declare ML Module "MetaCoqPlugin".
 
+From MetaCoq Require Import List.
+Import List.
 Require Import Strings.String.
 Require Import NArith.BinNat.
 Require Import NArith.BinNatDef.
-Require Import Lists.List.
 Import ListNotations.
 
 (* From MetaCoq Require Export Types. *)
@@ -363,7 +364,6 @@ Polymorphic Fixpoint tmatch {A P} t (ps : list (pattern A P t)) : M (P t) :=
 
 Arguments ptele {A B t C} _.
 Arguments pbase {A B t} _ _ _.
-
 
 Notation "[? x .. y ] ps" := (ptele (fun x=> .. (ptele (fun y=>ps)).. ))
   (at level 202, x binder, y binder, ps at next level) : metaCoq_pattern_scope.

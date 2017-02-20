@@ -1,4 +1,5 @@
 CAMLC = "ocamlc -c -rectypes -thread -warn-error +a"
+-arg -type-in-type
 -I "$(COQLIB)user-contrib/Unicoq"
 -I src
 -R theories MetaCoq
@@ -12,6 +13,8 @@ src/metaCoqInterp.ml
 src/metaCoqInterp.mli
 src/metaCoqTactic.ml4
 src/MetaCoqPlugin.mllib
+theories/Datatypes.v
+theories/List.v
 theories/Mtac2.v
 theories/ListUtils.v
 theories/Tactics.v

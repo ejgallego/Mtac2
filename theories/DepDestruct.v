@@ -1,10 +1,10 @@
 From MetaCoq
      Require Export Mtac2 ListUtils Tactics ImportedTactics.
+From MetaCoq Require Import List.
 Import MtacNotations.
 Import TacticsNotations.
 
 Require Import Strings.String.
-Require Import Lists.List.
 Import ListNotations.
 
 (** This is the [abs] from [MetaCoq] but first reducing the variable

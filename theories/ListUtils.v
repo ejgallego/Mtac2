@@ -1,6 +1,6 @@
 From MetaCoq Require Export Mtac2.
 Import MtacNotations.
-Require Import Lists.List.
+From MetaCoq Require Import List.
 Import ListNotations.
 
 Definition mmap {A B : Type} (f : A -> M B) :=
